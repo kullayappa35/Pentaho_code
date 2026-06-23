@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>param_example</name>
+    <name>run_after_evaluation</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
-    <trans_status>0</trans_status>
     <directory>/</directory>
     <parameters>
     </parameters>
@@ -428,23 +427,23 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2026/06/16 05:34:12.304</created_date>
+    <created_date>2026/06/19 05:30:00.335</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2026/06/16 05:34:12.304</modified_date>
-    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <modified_date>2026/06/19 05:30:00.335</modified_date>
+    <key_for_session_key/>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
   <connection>
-    <name>Test</name>
-    <server>localhost</server>
+    <name>demo</name>
+    <server/>
     <type>POSTGRESQL</type>
-    <access>Native</access>
-    <database>postgres</database>
-    <port>5432</port>
-    <username>postgres</username>
-    <password>Encrypted 2be98afc86aea9b80a30ca071fec3fd89</password>
+    <access>JNDI</access>
+    <database>Demo_Con</database>
+    <port>1521</port>
+    <username/>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -463,7 +462,7 @@
       </attribute>
       <attribute>
         <code>PORT_NUMBER</code>
-        <attribute>5432</attribute>
+        <attribute>1521</attribute>
       </attribute>
       <attribute>
         <code>PRESERVE_RESERVED_WORD_CASE</code>
@@ -505,21 +504,12 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Test</connection>
-    <sql>SELECT
-  customer_id
-, customer_name
-, city
-, "state"
-, customer_tier
-, signup_date
-FROM "public".customers 
-where customer_tier='${customer_tier}'
-</sql>
+    <connection>demo</connection>
+    <sql>select * from customers</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
-    <variables_active>Y</variables_active>
+    <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
     <cached_row_meta_active>N</cached_row_meta_active>
     <row-meta>
@@ -671,8 +661,8 @@ where customer_tier='${customer_tier}'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>288</xloc>
-      <yloc>224</yloc>
+      <xloc>200</xloc>
+      <yloc>100</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -696,8 +686,8 @@ where customer_tier='${customer_tier}'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>512</xloc>
-      <yloc>224</yloc>
+      <xloc>464</xloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
